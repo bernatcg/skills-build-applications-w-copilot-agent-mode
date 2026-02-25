@@ -1,38 +1,147 @@
-.App {
-  text-align: center;
+/* ─── Global ─────────────────────────────────────────── */
+body {
+  background-color: #f0f4f8;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* ─── Navbar ─────────────────────────────────────────── */
+.octofit-navbar {
+  background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%) !important;
+  box-shadow: 0 2px 12px rgba(13, 110, 253, 0.35);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.octofit-navbar .navbar-brand {
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.octofit-navbar .nav-link {
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 0.4rem 0.85rem !important;
+  transition: background 0.2s ease;
+}
+
+.octofit-navbar .nav-link:hover,
+.octofit-navbar .nav-link.active {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* ─── Hero / Home ────────────────────────────────────── */
+.octofit-hero {
+  background: linear-gradient(135deg, #0d6efd 0%, #6610f2 100%);
+  color: white;
+  border-radius: 1rem;
+  padding: 3.5rem 2rem;
+  box-shadow: 0 8px 30px rgba(13, 110, 253, 0.25);
+}
+
+.octofit-hero img {
+  max-height: 120px;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+}
+
+/* ─── Section Cards ──────────────────────────────────── */
+.octofit-card {
+  border: none;
+  border-radius: 0.875rem;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.octofit-card .card-header {
+  background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+  color: white;
+  padding: 1rem 1.5rem;
+  border: none;
+}
+
+.octofit-card .card-header h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* ─── Tables ─────────────────────────────────────────── */
+.octofit-table {
+  margin-bottom: 0;
+}
+
+.octofit-table thead th {
+  background-color: #e8f0fe;
+  color: #0a58ca;
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-bottom: 2px solid #0d6efd;
+  padding: 0.85rem 1rem;
+}
+
+.octofit-table tbody tr {
+  transition: background 0.15s ease;
+}
+
+.octofit-table tbody tr:hover {
+  background-color: #f0f4ff;
+}
+
+.octofit-table tbody td {
+  padding: 0.8rem 1rem;
+  vertical-align: middle;
+  border-color: #e9ecef;
+}
+
+/* ─── Rank badges ────────────────────────────────────── */
+.rank-badge {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.8rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.rank-1  { background: linear-gradient(135deg, #ffd700, #ffa500); box-shadow: 0 2px 6px rgba(255,165,0,0.5); }
+.rank-2  { background: linear-gradient(135deg, #c0c0c0, #909090); box-shadow: 0 2px 6px rgba(144,144,144,0.5); }
+.rank-3  { background: linear-gradient(135deg, #cd7f32, #a0522d); box-shadow: 0 2px 6px rgba(160,82,45,0.5); }
+.rank-other { background: #0d6efd; }
+
+/* ─── Stat pills ─────────────────────────────────────── */
+.stat-pill {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ─── Empty state ────────────────────────────────────── */
+.octofit-empty {
+  padding: 2.5rem 1rem;
+  color: #6c757d;
+  text-align: center;
+}
+
+/* ─── Quick-stat cards on home ───────────────────────── */
+.quick-stat-card {
+  border-radius: 0.875rem;
+  border: none;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.quick-stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.quick-stat-icon {
+  font-size: 2.2rem;
+  opacity: 0.85;
 }
